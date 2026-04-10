@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tvoje jméno | Servis mobilních telefonů</title>
+  <meta name="description" content="Servis mobilních telefonů, výměna displejů, baterií a další opravy. Rychle, spolehlivě a za férové ceny." />
+  <link rel="stylesheet" href="./style.css?v=2" />
+    <!--.//styl.css?v=2 protože jsi dělal změny vnázvech z index.html na home.html a pak se nehctělo načíst css, můžeš dát v3 a více -->
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <div class="logo">
+      <span class="logo-icon">📱</span>
+      <span>iPhone servis Kamenice nad Lipou</span>
+    </div>
+<!-- -->
+    <button class="nav-toggle" aria-label="Otevřít menu" aria-expanded="false" onclick="toggleNav(this)">☰</button>
+
+    <div class="nav-right" id="navRight">
+      <nav>
+        <a href="#sluzby" onclick="closeNav()">Služby</a>
+        <a href="#cenik" onclick="closeNav()">Ceník</a>
+        <a href="#kontakt" onclick="closeNav()">Kontakt</a>
+        <a href="#reference" onclick="closeNav()">Reference</a>
+      </nav>
+
+      <div class="socials">
+        <a href="https://www.instagram.com/iphoneservis_kamenice/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/instagram.svg" alt="Instagram">
+        </a>
+
+        <a href="https://www.facebook.com/profile.php?id=61587593079183" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/facebook.svg" alt="Facebook">
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Dostupný servis a prodej iPhonů v Kamenici nad Lipou</h1>
+        <p class="hero-description">
+          Věnuji se servisu iPhonů, u kterých řeším běžné i náročnější závady. Provádím výměny baterií, displejů, zadních skel, konektorů a dalších komponentů. Nabízím díly jak originální, tak ověřenou druhovýrobu.
+          Mimo servisu nabízím i prodej iPhonů. Aktuální nabídku najdete na mém <a href="https://www.instagram.com/iphoneservis_kamenice/">Instagramu</a>
+        </p>
+        <div class="hero-buttons">
+          <a href="#kontakt" class="btn btn-primary">Kontaktovat</a>
+          <a href="https://www.google.com/maps/place/Masarykova+430,+394+70+Kamenice+nad+Lipou/@49.2974029,15.0732101,17z/data=!3m1!4b1!4m6!3m5!1s0x470cc337dd8a45c9:0x1fda02fcd0b00ad0!8m2!3d49.2974029!4d15.075785!16s%2Fg%2F11crr7mkzd?entry=ttu&g_ep=EgoyMDI2MDMzMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Otevřít mapu</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <img src="IMG_2877 2.jpg" alt="Logo servisu mobilních telefonů" class="hero-image">
+      </div>
+    </div>
+  </section>
+
+  <section id="sluzby" class="section">
+    <div class="container">
+      <h2>Co dělám</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Výměna displeje</h3>
+          <p>Prasklé sklo, nefunkční dotyk nebo poškozený OLED/LCD panel.</p>
+        </div>
+
+        <div class="card">
+          <h3>Výměna baterie</h3>
+          <p>Rychlé vybíjení, přehřívání nebo výrazně snížená kapacita baterie.</p>
+        </div>
+
+        <div class="card">
+          <h3>Nabíjení a konektory</h3>
+          <p>Čištění konektorů, opravy nabíjení a řešení problémů s dockem.</p>
+        </div>
+
+        <div class="card">
+          <h3>Diagnostika</h3>
+          <p>Zjištění závady a návrh nejvhodnější opravy podle stavu zařízení.</p>
+        </div>
+
+        <div class="card">
+          <h3>Kamery a reproduktory</h3>
+          <p>Řešení problémů s fotoaparátem, mikrofonem, sluchátkem a hlasitým reproduktorem.</p>
+        </div>
+
+        <div class="card">
+          <h3>Další opravy</h3>
+          <p>Individuálně podle typu telefonu a konkrétní závady.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cenik" class="section section-alt">
+    <div class="container">
+      <h2>Orientační ceník</h2>
+      <p class="section-intro">
+        Ceny jsou orientační. Přesnou cenu vždy potvrdím podle modelu telefonu a typu opravy.
+      </p>
+
+      <div class="price-table">
+        <div class="price-row">
+          <span>Výměna displeje</span>
+          <strong>od 1 490 Kč</strong>
+        </div>
+        <div class="price-row">
+          <span>Výměna baterie</span>
+          <strong>od 890 Kč</strong>
+        </div>
+        <div class="price-row">
+          <span>Čištění po zatečení / diagnostika</span>
+          <strong>od 490 Kč</strong>
+        </div>
+        <div class="price-row">
+          <span>Oprava nabíjení / konektoru</span>
+          <strong>od 790 Kč</strong>
+        </div>
+        <div class="price-row">
+          <span>Další servis</span>
+          <strong>dle domluvy</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" class="section">
+    <div class="container contact-grid">
+      <div>
+        <h2>Kde mě najdete</h2>
+        <p>
+          <strong>Adresa:</strong><br>
+          Masarykova 430<br>
+          Kamenice nad Lipou<br>
+          394 70
+        </p>
+
+        <p>
+          <strong>Telefon:</strong><br>
+          <a href="tel:+420728188638">+420 728 188 638</a>
+        </p>
+
+        <p>
+          <strong>E-mail:</strong><br>
+          <a href="mailto:tvuj@email.cz">tvuj@email.cz</a>
+        </p>
+
+        <p>
+          <strong>IČO:</strong><br>
+          14246767
+        </p>
+
+        <p>
+          <strong>Otevírací doba:</strong><br>
+          Po–Pá: dle domluvy<br>
+          So–Ne: dle domluvy
+        </p>
+
+        <a href="https://www.google.com/maps/place/Masarykova+430,+394+70+Kamenice+nad+Lipou/@49.2974029,15.0732101,17z/data=!3m1!4b1!4m6!3m5!1s0x470cc337dd8a45c9:0x1fda02fcd0b00ad0!8m2!3d49.2974029!4d15.075785!16s%2Fg%2F11crr7mkzd?entry=ttu&g_ep=EgoyMDI2MDMzMS4wIKXMDSoASAFQAw%3D%3D
+        " target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Navigovat na Google Mapách
+        </a>
+      </div>
+
+      <div class="map-box">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2601.8912659051834!2d15.073210076481933!3d49.297402871395036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470cc337dd8a45c9%3A0x1fda02fcd0b00ad0!2sMasarykova%20430%2C%20394%2070%20Kamenice%20nad%20Lipou!5e0!3m2!1scs!2scz!4v1775160331967!5m2!1scs!2scz" style="border:0; width:100%; height:360px; border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="reference" class="section section-alt">
+  <div class="container">
+    <div class="reviews-head">
+      <div class="reviews-title">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/facebook.svg" alt="Facebook" class="facebook-icon">
+        <h2>Facebook recenze</h2>
+      </div>
+
+      <a href="https://www.facebook.com/profile.php?id=61587593079183&sk=reviews" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+        Zobrazit všechny recenze
+      </a>
+    </div>
+
+    <div class="reviews-slider" id="reviewsSlider">
+      <button class="slider-btn prev" aria-label="Předchozí recenze" onclick="scrollReviews(-1)">‹</button>
+
+      <div class="reviews-track">
+        <article class="review-card">
+          <div class="review-top">
+            <strong>Tomáš Beneš</strong>
+            <span class="stars" aria-label="5 z 5 hvězdiček">★★★★★</span>
+          </div>
+          <p>
+            Doporučuji vždy skvělý a seriózní nákup kupoval jsem dvakrát skvěla domluva ochota a i ceny které široko daleko nikdo nemá. K nákupu vždy skvěle příslušenství prostě pokud někdo zvažujete nákup IPhone tak v tomhle servisu .
+
+        </article>
+
+        <article class="review-card">
+          <div class="review-top">
+            <strong>Vojtěch Šinfeld</strong>
+            <span class="stars" aria-label="5 z 5 hvězdiček">★★★★★</span>
+          </div>
+          <p>
+            Servis byl rychlý a precizní …naprostá spokojenost 👍
+
+          </p>
+        </article>
+
+        <article class="review-card">
+          <div class="review-top">
+            <strong>Andrea Bodnárová Radová</strong>
+            <span class="stars" aria-label="5 z 5 hvězdiček">★★★★★</span>
+          </div>
+          <p>
+            Mohu jen doporučit ,rychla domluva a bezproblémové dodání v podstatě ihned😊
+
+          </p>
+        </article>
+
+        <article class="review-card">
+          <div class="review-top">
+            <strong>Maruška Mitrášová</strong>
+            <span class="stars" aria-label="5 z 5 hvězdiček">★★★★★</span>
+          </div>
+          <p>
+            Doporučujeme👍 👍👍Super komunikace rychlý obchod 👍
+          </p>
+        </article>
+      </div>
+
+      <button class="slider-btn next" aria-label="Další recenze" onclick="scrollReviews(1)">›</button>
+    </div>
+  </div>
+</section>
+
+<script>
+  function toggleNav(btn) {
+    const nav = document.getElementById('navRight');
+    const isOpen = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen);
+    btn.textContent = isOpen ? '✕' : '☰';
+  }
+
+  function closeNav() {
+    const nav = document.getElementById('navRight');
+    const btn = document.querySelector('.nav-toggle');
+    nav.classList.remove('open');
+    if (btn) { btn.setAttribute('aria-expanded', 'false'); btn.textContent = '☰'; }
+  }
+
+  function scrollReviews(direction) {
+    const track = document.querySelector('.reviews-track');
+    const card = document.querySelector('.review-card');
+    if (!track || !card) return;
+
+    const cardWidth = card.offsetWidth + 24;
+    track.scrollBy({
+      left: direction * cardWidth,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 Mikuláš Stehlík – iPhone servis</p>
+      <p>Kamenice nad Lipou</p>
+    </div>
+  </footer>
+</body>
+</html>
