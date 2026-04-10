@@ -1,7 +1,3 @@
-body {
-  background: lightblue;
-  font-family: Arial, sans-serif;
-}
 :root {
   --bg: #eaf8ff;
   --bg-soft: #f6fcff;
@@ -42,10 +38,14 @@ a {
   text-decoration: none;
 }
 
+/* === LAYOUT === */
+
 .container {
   width: min(92%, var(--container));
   margin: 0 auto;
 }
+
+/* === HEADER & NAV === */
 
 .header {
   position: sticky;
@@ -85,6 +85,57 @@ nav {
 nav a {
   font-weight: 600;
 }
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* hamburger — skryté na desktopu, zobrazí se na mobilu přes media query */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--text);
+  line-height: 1;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.socials a {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  transition: 0.2s ease;
+}
+
+.socials a:hover {
+  transform: translateY(-2px);
+  background: #f2fbff;
+}
+
+.socials img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) saturate(100%) invert(19%) sepia(34%) saturate(960%) hue-rotate(163deg) brightness(96%) contrast(93%);
+}
+
+/* === HERO === */
 
 .hero {
   padding: 80px 0 50px;
@@ -167,6 +218,8 @@ nav a {
   border-radius: 20px;
 }
 
+/* === SECTIONS === */
+
 .section {
   padding: 70px 0;
 }
@@ -185,6 +238,8 @@ nav a {
   max-width: 700px;
   margin-bottom: 28px;
 }
+
+/* === KARTY SLUŽEB === */
 
 .cards {
   display: grid;
@@ -211,6 +266,8 @@ nav a {
   color: var(--muted);
 }
 
+/* === CENÍK === */
+
 .price-table {
   display: grid;
   gap: 12px;
@@ -227,6 +284,8 @@ nav a {
   box-shadow: var(--shadow);
 }
 
+/* === KONTAKT === */
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -239,9 +298,10 @@ nav a {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 24px;
-  min-height: 240px;
   box-shadow: var(--shadow);
 }
+
+/* === RECENZE === */
 
 .reviews {
   display: grid;
@@ -267,163 +327,7 @@ nav a {
   font-weight: 600;
 }
 
-.footer {
-  padding: 28px 0;
-  border-top: 1px solid var(--border);
-  background: #f4fbff;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-@media (max-width: 900px) {
-  .hero-grid,
-  .contact-grid,
-  .reviews {
-    grid-template-columns: 1fr;
-  }
-
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .hero h1 {
-    font-size: 36px;
-  }
-
-  .price-row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width: 640px) {
-  .nav {
-    flex-wrap: wrap;
-    padding: 14px 0;
-  }
-
-  .logo span:last-child {
-    font-size: 16px;
-  }
-
-  .nav-toggle {
-    display: block;
-  }
-
-  .nav-right {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    padding-top: 12px;
-    border-top: 1px solid var(--border);
-    margin-top: 8px;
-  }
-
-  .nav-right.open {
-    display: flex;
-  }
-
-  nav {
-    gap: 12px;
-    flex-direction: column;
-  }
-
-  nav a {
-    padding: 4px 0;
-    min-height: 44px;
-    display: flex;
-    align-items: center;
-  }
-
-  .hero {
-    padding-top: 50px;
-  }
-
-  .hero h1 {
-    font-size: 28px;
-  }
-
-  .section h2 {
-    font-size: 26px;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .btn {
-    width: 100%;
-    text-align: center;
-  }
-}
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-.socials {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.socials a {
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  box-shadow: var(--shadow);
-  transition: 0.2s ease;
-}
-
-.socials a:hover {
-  transform: translateY(-2px);
-  background: #f2fbff;
-}
-
-.socials img {
-  width: 18px;
-  height: 18px;
-  filter: brightness(0) saturate(100%) invert(19%) sepia(34%) saturate(960%) hue-rotate(163deg) brightness(96%) contrast(93%);
-}
-
-/* hamburger button — skryté na desktopu */
-.nav-toggle {
-  display: none;
-  background: none;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 6px 12px;
-  font-size: 22px;
-  cursor: pointer;
-  color: var(--text);
-  line-height: 1;
-}
-
-@media (max-width: 900px) {
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-right {
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}.reviews-head {
+.reviews-head {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -442,9 +346,8 @@ nav a {
   width: 30px;
   height: 30px;
   position: relative;
- top: 5px
+  top: 5px;
 }
- 
 
 .reviews-slider {
   display: grid;
@@ -520,7 +423,54 @@ nav a {
   background: #f2fbff;
 }
 
+/* === FOOTER === */
+
+.footer {
+  padding: 28px 0;
+  border-top: 1px solid var(--border);
+  background: #f4fbff;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* === MEDIA QUERIES === */
+
 @media (max-width: 900px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-right {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-grid,
+  .contact-grid,
+  .reviews {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .price-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .reviews-slider {
     grid-template-columns: 1fr;
   }
@@ -535,6 +485,80 @@ nav a {
 }
 
 @media (max-width: 640px) {
+  .nav {
+    flex-wrap: wrap;
+    padding: 14px 0;
+  }
+
+  .logo span:last-child {
+    font-size: 16px;
+  }
+
+  /* zobraz hamburger tlačítko */
+  .nav-toggle {
+    display: block;
+  }
+
+  /* schovej navigaci — ukáže se jen po kliknutí na hamburger */
+  .nav-right {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    margin-top: 8px;
+  }
+
+  .nav-right.open {
+    display: flex;
+  }
+
+  nav {
+    gap: 4px;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav a {
+    padding: 10px 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    width: 100%;
+  }
+
+  nav a:last-child {
+    border-bottom: none;
+  }
+
+  .hero {
+    padding-top: 40px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+
+  .section h2 {
+    font-size: 24px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
   .reviews-track {
     grid-auto-columns: 92%;
   }
