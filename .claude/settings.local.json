@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "mcp__Claude_Preview__preview_start"
+      "mcp__Claude_Preview__preview_start",
+      "Bash(curl -s \"https://mikulda13-bit.github.io/home.html\")",
+      "Bash(curl -sI \"https://mikulda13-bit.github.io/home.html\")",
+      "Bash(curl -sI \"https://mikulda13-bit.github.io/website-demo-iphone-kamenice-/home.html\")",
+      "Bash(curl -sI \"https://mikulda13-bit.github.io/website-demo-iphone-kamenice-/\")"
     ]
   }
 }
