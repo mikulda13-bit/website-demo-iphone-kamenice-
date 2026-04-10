@@ -586,13 +586,14 @@ nav a {
 }
 
 .work-track {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: calc(33.333% - 14px);
+  display: flex;
+  flex-direction: row;
   gap: 20px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
   padding-bottom: 8px;
 }
 
@@ -606,6 +607,7 @@ nav a {
 }
 
 .work-item {
+  flex: 0 0 calc(33.333% - 14px);
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
@@ -638,13 +640,13 @@ nav a {
     display: none;
   }
 
-  .work-track {
-    grid-auto-columns: calc(50% - 10px);
+  .work-item {
+    flex: 0 0 calc(50% - 10px);
   }
 }
 
 @media (max-width: 640px) {
-  .work-track {
-    grid-auto-columns: 78%;
+  .work-item {
+    flex: 0 0 80%;
   }
 }
