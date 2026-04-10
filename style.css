@@ -575,3 +575,76 @@ nav a {
     height: 260px;
   }
 }
+
+/* === KARUSEL UKÁZKY PRÁCE === */
+
+.work-slider {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 16px;
+  align-items: center;
+}
+
+.work-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(33.333% - 14px);
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 8px;
+}
+
+.work-track::-webkit-scrollbar {
+  height: 6px;
+}
+
+.work-track::-webkit-scrollbar-thumb {
+  background: #b8ddea;
+  border-radius: 999px;
+}
+
+.work-item {
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.work-label {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text);
+  text-align: center;
+}
+
+.work-item img {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  background: var(--border);
+}
+
+@media (max-width: 900px) {
+  .work-slider {
+    grid-template-columns: 1fr;
+  }
+
+  .work-slider .slider-btn {
+    display: none;
+  }
+
+  .work-track {
+    grid-auto-columns: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 640px) {
+  .work-track {
+    grid-auto-columns: 78%;
+  }
+}
